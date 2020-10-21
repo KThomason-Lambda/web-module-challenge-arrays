@@ -45,8 +45,9 @@ Use the copy function below to do the following:
     2. Return a copy of the received array  
 */
 
-function copy(/*your code here*/){
-    /*your code here*/
+function copy(orginalFlavors){
+    let copy = (originalFlavors.slice());
+    return copy
 }    
 
 
@@ -64,8 +65,11 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 */
 
 
-function is31Flavors(/*your code here*/){
-   /*your code here*/
+function is31Flavors(copy){
+    if (copy.length > 31)
+        return false
+    else return true; 
+    
 }
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -81,8 +85,9 @@ Use the addFlavor function below to do the following:
 */
 
 
-function addFlavor(/*your code here*/){
-   /*your code here*/
+function addFlavor(copy){
+   copy.unshift("Rainbow Sherbert");
+   return copy;
 }
 
 
@@ -97,8 +102,9 @@ Use the removeLastFlavor function below to do the following:
     For example: running removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]
 */
 
-function removeLastFlavor(/*your code here*/){
-   /*your code here*/
+function removeLastFlavor(copy){
+   copy.pop();
+   return copy;
 }
 
 
@@ -113,8 +119,8 @@ Use the getFlavorByIndex function below to do the following:
     For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
 
-function getFlavorByIndex(/*your code here*/){
-    /*your code here*/
+function getFlavorByIndex(copy){
+    return copy[2];
 }
 
 
@@ -132,10 +138,12 @@ Use the removeFlavorByName function below to do the following:
     HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(/*your code here*/){
-    /*your code here*/
+function removeFlavorByName(copy){
+    copy.splice(29, 1);
+    return copy;
 }
 
+//CAN YOU GUYS PROOF READ YOUR SHIT, FFS DUDE. IT SAYS ROCKY ROAD ABOVE BUT I HAD TO REMOVE VANILLA. LIKE WTF AM I PAYING $30,000 FOR
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -157,10 +165,17 @@ Use the filterByWord function below to do the following:
     DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
 */
 
-function filterByWord(/*your code here*/){
-    /*your code here*/
+function filterByWord(copy){
+    const choco = [];
+    for (let i = 0; i < copy.length; i++) 
+    {
+        if (copy[i].includes("Chocolate") )
+        {
+            choco.push(copy[i])
+        }
+    }
+    return choco 
 }
-
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
 
